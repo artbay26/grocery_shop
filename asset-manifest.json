@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/grocery_shop/static/css/main.6ea1b197.css",
+    "main.js": "/grocery_shop/static/js/main.3d7c7721.js",
+    "static/media/image_1.png": "/grocery_shop/static/media/image_1.fe2c3315bd1d333e0fbe.png",
+    "static/media/image_2.png": "/grocery_shop/static/media/image_2.47c0003f587227f7501f.png",
+    "static/media/segoeui.ttf": "/grocery_shop/static/media/segoeui.8faf04df2515b06cfea9.ttf",
+    "static/media/image_5.png": "/grocery_shop/static/media/image_5.9853fdc535c5b52fd585.png",
+    "static/media/image_11.png": "/grocery_shop/static/media/image_11.c4ae654a28703a82f9af.png",
+    "static/media/ctlg_6.png": "/grocery_shop/static/media/ctlg_6.346a9385905e6336fbd2.png",
+    "static/media/ctlg_7.png": "/grocery_shop/static/media/ctlg_7.6763cf5a82e9ec914c61.png",
+    "static/media/Inter-Bold.ttf": "/grocery_shop/static/media/Inter-Bold.9aab1ebe6bd16660e37e.ttf",
+    "static/media/Inter-Regular.ttf": "/grocery_shop/static/media/Inter-Regular.b559a93b35af397f4b6f.ttf",
+    "static/media/ctlg_2.png": "/grocery_shop/static/media/ctlg_2.b6f09d1b580079cb4251.png",
+    "static/media/ctlg_11.png": "/grocery_shop/static/media/ctlg_11.0616a5f325f307935fae.png",
+    "static/media/Poppins-Regular.ttf": "/grocery_shop/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/grocery_shop/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-Bold.ttf": "/grocery_shop/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/ctlg_9.png": "/grocery_shop/static/media/ctlg_9.a056cc2d42113c31af6d.png",
+    "static/media/JosefinSans-Bold.ttf": "/grocery_shop/static/media/JosefinSans-Bold.3f4abd6594ab5b202177.ttf",
+    "index.html": "/grocery_shop/index.html",
+    "main.6ea1b197.css.map": "/grocery_shop/static/css/main.6ea1b197.css.map",
+    "main.3d7c7721.js.map": "/grocery_shop/static/js/main.3d7c7721.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ea1b197.css",
+    "static/js/main.3d7c7721.js"
+  ]
+}
