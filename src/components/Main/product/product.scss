@@ -1,0 +1,105 @@
+@import'../../../styles/variables';
+@import'../../../styles/mixins';
+@import'../../../styles/fonts';
+.productCard__container {
+    @include flex (column, null, end, 20px, 0);
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    margin: 80px auto;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.procuctCard__close {
+    text-align: end;
+}
+
+.fa-xmark {
+    color: $black;
+    font-size: 30px !important;
+    padding: 25px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.productCard__wrapperItems {
+    display: flex !important;
+    @include flex (row, center, center, 5%, 10%);
+}
+
+.productCard__titleBox {
+    @include flex (column, null, start, 16px, 0);
+    flex: 1 0 50%;
+    padding: 16px;
+}
+
+.productCard__title {
+    font-size: 32px;
+    line-height: calc(40/32);
+    font-weight: 700;
+}
+
+.productCard__subtitle {
+    font-size: 20px;
+    line-height: calc(24/20);
+}
+
+.productCard__txt {
+    font-size: 16px;
+    line-height: calc(20/16);
+    margin-bottom: 50px;
+}
+
+.productCard__rate {
+    font-size: 16px;
+    margin-bottom: 50px;
+    span {
+        color: #e3b20f;
+    }
+}
+
+.productCard__priceCounterBox {
+    @include flex (row, space-between, center, 16px, 0);
+    width: 100%;
+}
+
+.productCard__price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.productCard__btn {
+    @include btn (16px, 1, 10px 16px, $green, white, 50px)
+}
+
+.productCard__img {}
+
+.main {
+    &__productCard {
+        background-color: $card-color;
+    }
+}
+
+.product {
+    &__img {}
+}
+
+@media all and (max-width: 768px) {
+    .productCard__wrapperItems {
+        @include flex (column, center, center, 5%, 10%);
+    }
+}
+
+@media all and (max-width: 320px) {
+    .productCard__wrapperItems {
+        @include flex (column, center, center, 5%, 10%);
+    }
+    .productCard__priceCounterBox {
+        @include flex (column, null, center, 16px, 16px);
+    }
+    .productCard__btn {
+        align-self: center;
+    }
+}

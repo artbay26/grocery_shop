@@ -1,0 +1,49 @@
+@import'../../styles/variables';
+@import'../../styles/mixins';
+@import'../../styles/fonts';
+.footer {}
+
+.foter {
+    &__container {
+        @include flex (row, space-between, center, 15px, 3%);
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        background-color: $card-color;
+        width: 100%;
+    }
+}
+
+.footer {
+    flex-wrap: wrap;
+    &__logo {
+        flex: 0 1 33%;
+        img {
+            width: 30%;
+        }
+    }
+    &__list {
+        flex: 0 1 33%;
+        @include flex (row, center, center, 15px, 5%);
+        flex-wrap: wrap;
+    }
+    &__item {
+        &:hover {
+            cursor: pointer;
+            color: $green;
+        }
+    }
+    &__social {
+        flex: 0 1 33%;
+        @include flex (row, center, center, 15px, 5%);
+        flex-wrap: wrap;
+    }
+}
+
+.social {
+    &__item {
+        &:hover {
+            cursor: pointer;
+            color: $green;
+        }
+    }
+}

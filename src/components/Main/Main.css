@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Josefin Sans", sans-serif;
+  src: url("../fonts/JosefinSans-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../fonts/Inter-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../fonts/Inter-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("../fonts/Poppins-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("../fonts/Poppins-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("../fonts/Poppins-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe", sans-serif;
+  src: url("../fonts/segoeui.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.main__container {
+  flex-direction: column;
+  row-gap: 75px;
+}
+.main__slider {
+  margin-top: 75px;
+}
+/*----slider-----*/
+.slider__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  height: 440px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 50px;
+  width: 100%;
+}
+.slider__titleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 24px;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  flex: 1 0 50%;
+  padding: 16px;
+}
+.slider__title {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.slider__title span {
+  font-weight: 700;
+}
+.slider__txt {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.slider__btn {
+  font-family: "Segoe", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  padding: 10px 16px;
+  background: #5EC401;
+  color: white;
+  border-radius: 50px;
+}
+.slider__btn span {
+  font-size: 12px;
+}
+.slider__btn:hover {
+  cursor: pointer;
+  background-color: rgba(196, 196, 196, 0.6);
+  color: #37474F;
+}
+.slider__imgBox {
+  padding: 16px;
+}
+
+/*----catalog----*/
+.catalog__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  row-gap: 75px;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  max-width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.catalog__product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 50px;
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
+
+.product__imgBox {
+  height: 320px;
+  width: 300px;
+  background-color: rgba(196, 196, 196, 0.6);
+  position: relative;
+  border-radius: 30px;
+}
+.product__imgBox:hover {
+  cursor: pointer;
+  background-color: #5EC401;
+}
+.product__img {
+  position: absolute;
+  border-radius: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.product__img:hover {
+  cursor: pointer;
+}
+.product__discount {
+  font-family: "Josefin Sans", sans-serif;
+  position: absolute;
+  background-color: #5EC401;
+  width: 96px;
+  height: 45px;
+  border-radius: 30px 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3;
+  color: white;
+  font-size: 16px;
+}
+.product__discount::before {
+  content: "- ";
+}
+.product__discount::after {
+  content: "%";
+}
+.product__textBox {
+  font-family: "Inter", sans-serif;
+}
+.product__title {
+  font-weight: 700;
+  font-size: 18px;
+}
+.product__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.product__price {
+  color: #F37A20;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.product__price::before {
+  content: "$";
+}
+.product__button {
+  max-width: 60%;
+  align-self: center;
+  font-family: "Segoe", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  padding: 10px 16px;
+  background: #5EC401;
+  color: white;
+  border-radius: 50px;
+}
+.product__button:hover {
+  cursor: pointer;
+  background-color: rgba(196, 196, 196, 0.6);
+  color: #37474F;
+}/*# sourceMappingURL=Main.css.map */

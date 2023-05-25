@@ -1,0 +1,255 @@
+    @import'../../styles/variables';
+    @import'../../styles/mixins';
+    @import'../../styles/fonts';
+    .main {
+        &__container {
+            flex-direction: column;
+            row-gap: 75px;
+        }
+        &__slider {
+            margin-top: 75px;
+        }
+        &__btnViewAll {
+            text-align: end;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            margin: 16px;
+            font-style: italic;
+            span {
+                &:hover {
+                    cursor: pointer;
+                    color: $green;
+                    border-bottom: 1px solid $green;
+                }
+            }
+        }
+    }
+    /*------------------------slider---------------------------*/
+    
+    .slider {
+        &__container {
+            @include flex (row, space-between, center, 0, 0);
+            max-height: 440px;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 50px;
+            width: 100%;
+        }
+        &__titleBox {
+            @include flex (column, null, start, 24px, 0);
+            flex: 1 0 50%;
+            padding: 16px;
+        }
+        &__title {
+            font-size: 52px;
+            font-weight: 400;
+            line-height: calc(78/52);
+            span {
+                font-weight: 700;
+            }
+        }
+        &__txt {
+            font-size: 20px;
+            line-height: calc(30/20);
+        }
+        &__btn {
+            span {
+                font-size: 12px;
+            }
+            @include btn (16px, 1, 10px 16px, $green, white, 50px)
+        }
+        &__imgBox {
+            padding: 16px;
+        }
+    }
+    /*----------------------catalog-----------------------------*/
+    
+    .catalog {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        &__backHome {
+            height: 65px;
+            width: 15%;
+            background-color: $green;
+            margin: 80px auto 0 auto;
+            border-radius: 70px 0 70px 0;
+            text-align: center;
+            font-size: 24px;
+            line-height: (72/24);
+            color: white;
+            vertical-align: middle;
+            &:hover {
+                cursor: pointer;
+                background-color: $card-color
+            }
+        }
+        &__container {
+            @include flex (row, center, center, 75px, 3%);
+            max-width: 90%;
+            //margin: 0 auto;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        &__product {
+            @include flex (column, center, null, 20px, 0);
+            max-width: 185px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .product {
+        &__imgBox {
+            height: 275px;
+            background-color: $bg-color;
+            position: relative;
+            border-radius: 30px;
+            &:hover {
+                cursor: pointer;
+                background-color: $greenlight;
+            }
+        }
+        &__img {
+            position: absolute;
+            border-radius: 30px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &__discount {
+            font-family: 'Josefin Sans', sans-serif;
+            position: absolute;
+            background-color: $green;
+            width: 76px;
+            height: 35px;
+            border-radius: 30px 0;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 2;
+            color: white;
+            font-size: 16px;
+            &::before {
+                content: '- ';
+            }
+            &::after {
+                content: '%';
+            }
+        }
+        &__textBox {
+            font-family: 'Inter', sans-serif;
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        &__subtitle {
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        &__priceRateBox {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        &__price {
+            color: $orange;
+            font-size: 18px;
+            font-weight: 700;
+            &::before {
+                content: '$ ';
+                font-weight: 400;
+                font-size: 17px;
+            }
+        }
+        &__rate {
+            span {
+                color: #e3b20f;
+            }
+        }
+        &__button {
+            max-width: 90%;
+            align-self: center;
+            @include btn (16px, 1, 10px 16px, $green, white, 50px)
+        }
+    }
+    
+    .product {
+        &__counter {
+            @include flex (row, center, center, 0, 0);
+            width: 60%;
+            margin: 0 auto;
+            height: 25px;
+        }
+    }
+    /*----------------------counter-----------------------------*/
+    
+    .counter {
+        &__btnR {
+            @include btn (20px, 1, 8px 16px, white, $black, 0 30px 30px 0);
+            font-weight: 700;
+            border: 1px solid $green;
+        }
+        &__btnL {
+            @include btn (20px, 1, 8px 16px, white, $black, 30px 0 0 30px);
+            font-weight: 700;
+            border: 1px solid $green;
+        }
+        &__value {
+            padding: 8px 16px;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    /*----------------------media------------------------------*/
+    
+    @media all and (max-width: 992px) {
+        .slider {
+            &__title {
+                font-size: 42px;
+            }
+        }
+    }
+    
+    @media all and (max-width: 768px) {
+        .slider {
+            &__container {
+                @include flex (column, null, center, 0, 0);
+            }
+            &__titleBox {
+                @include flex (column, null, center, 24px, 0);
+            }
+            &__title {
+                font-size: 24px;
+                line-height: calc(40/32);
+            }
+            &__txt {
+                font-size: 14px;
+                line-height: calc(24/16);
+            }
+            &__imgBox {
+                padding: 16px;
+                width: 50%;
+            }
+        }
+    }
+    
+    @media all and (max-width: 320px) {
+        .slider {
+            &__title {
+                font-size: 24px;
+                line-height: calc(40/32);
+            }
+            &__txt {
+                font-size: 14px;
+                line-height: calc(24/16);
+            }
+            &__imgBox {
+                display: none;
+            }
+        }
+    }

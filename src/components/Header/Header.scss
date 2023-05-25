@@ -1,0 +1,218 @@
+@import'../../styles/variables';
+@import'../../styles/mixins';
+@import'../../styles/fonts';
+.header {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    &::before {
+        content: "";
+        position: fixed;
+        height: 80px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: -1;
+    }
+}
+
+.header {
+    &__container {
+        height: 80px;
+        @include flex (row, space-between, center, 0, 5%);
+    }
+    &__btnMenu {
+        font-size: 24px;
+        padding: 8px 18px;
+        background-color: $card-color;
+        border-radius: 30px;
+        margin-left: 10px;
+        &:hover {
+            color: $green;
+            cursor: pointer;
+        }
+        & span {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    &__menuSearchBox {
+        @include flex (row, space-between, center, 0, 3%);
+        padding: 8px 18px;
+        background-color: $card-color;
+        border-radius: 30px;
+    }
+    &__menu {}
+    &__btnSearch {
+        font-size: 24px;
+        &:hover {
+            color: $green;
+            cursor: pointer;
+        }
+    }
+    &__search {
+        font-size: 16px;
+        outline: none;
+        background-color: $card-color;
+    }
+    &__logo {
+        width: 8%;
+        & img {
+            background-size: cover;
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+    &__actions {
+        @include flex (row, space-between, center, 0, 5%);
+        width: 40%;
+    }
+}
+
+.menu {
+    &__body {
+        background-color: $grey;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 70px;
+        width: 100vw;
+        z-index: 2;
+    }
+    &__list {
+        background-color: $green;
+        left: 0;
+        width: 320px;
+        height: 100vh;
+        padding: 30px;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        z-index: 3;
+        font-size: 20px;
+    }
+    &__item {
+        margin-bottom: 20px;
+    }
+    &__link {
+        color: $card-color;
+        &:hover {
+            cursor: pointer;
+            color: $black
+        }
+    }
+}
+
+.actions {
+    &__select {
+        @include flex (row, space-between, center, 0, 10%);
+        padding: 14px 14px;
+        background-color: $card-color;
+        border-radius: 30px;
+        margin-right: 10px;
+    }
+    &__userList {
+        @include flex (row, space-between, center, 0, 5%);
+        font-size: 24px;
+        width: 50%;
+        padding: 8px 18px;
+        background-color: $card-color;
+        border-radius: 30px;
+    }
+    &__link {
+        color: $black;
+        &:hover {
+            color: $green;
+            cursor: pointer;
+        }
+    }
+    &__currencyList {
+        outline: none;
+        background-color: $card-color;
+        &:hover {
+            color: $green;
+            cursor: pointer;
+        }
+    }
+    &__languageList {
+        outline: none;
+        background-color: $card-color;
+        &:hover {
+            color: $green;
+            cursor: pointer;
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    .header {
+        span {
+            display: none;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .header {
+        &__btnMenu {
+            font-size: 16px;
+            padding: 5px 15px;
+        }
+        &__menuSearchBox {
+            padding: 5px 15px;
+        }
+        &__btnSearch {
+            font-size: 16px;
+        }
+        &__search {
+            display: none;
+        }
+        &__logo {
+            width: 18%;
+        }
+    }
+    .actions {
+        &__select {
+            padding: 10px 10px;
+        }
+        &__userList {
+            font-size: 16px;
+            padding: 5px 15px;
+            justify-content: center;
+        }
+        &__userItem {
+            &:nth-child(1),
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        &__link {
+            color: $black;
+            &:hover {
+                color: $green;
+                cursor: pointer;
+            }
+        }
+        &__currencyList {
+            font-size: 12px;
+            padding: 0;
+        }
+        &__languageList {
+            display: none;
+        }
+    }
+}
+
+@media all and (max-width: 320px) {
+    .header {
+        &__container {
+            @include flex (row, space-between, center, 0, 1%);
+        }
+    }
+}
