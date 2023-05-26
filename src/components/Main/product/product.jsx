@@ -10,10 +10,10 @@ import { useNavigate } from "react-router-dom";
 
 const ProductCard = () => {
     let [catalog, setCatalog] = useState({});
-    let {khvostik} = useParams();
+    let {ItemID} = useParams();
     
     useEffect( () => {
-        axios.get(`https://dummyjson.com/products/${khvostik}`)
+        axios.get(`https://dummyjson.com/products/${ItemID}`)
             .then(response => {
                 setCatalog(response.data)
             })
